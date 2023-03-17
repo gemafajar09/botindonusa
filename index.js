@@ -29,25 +29,28 @@ Set environment variables as described below:
 */
 
 const setup = require('./setup.js');
-const { start } = require('./bot.js');
+const {
+  start
+} = require('./bot.js');
 const chalk = require('chalk');
 
-const printValues = function(values, text) {
+const printValues = function (values, text) {
   console.log(text ? text : 'Current values:');
   for (var key in values) {
     console.log(`  ${key} = \x1b[32m'${values[key]}'\x1b[0m`);
   }
 }
 
-const startBot = function(values) {
+const startBot = function (values) {
   console.log(`${chalk.bgBlue("[INFO]")} ${chalk.blue("Starting bot... this may take a few seconds to start...")}`);
   var bot = start(values);
-  bot.on('restart',() => {
+  bot.on('restart', () => {
     console.log('\nRestarting bot');
     bot.destroy();
     bot = start(values);
   })
-  var shutdown = function() {
+  
+  var shutdown = function () {
     console.log(`${chalk.bgRed(`[STATUS]`)} ${chalk.red('Shutting down')}`);
     let destructor = bot.destroy();
     if (destructor) {

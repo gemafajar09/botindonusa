@@ -252,7 +252,7 @@ var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBE
       getPlayers().then((players) => {
     bot.user.setPresence({
       activities: [{
-          name: `${SERVER_NAME}`,
+          name: `Palying ${GetNumPlayerIndices()} player(s)`,
           type: "WATCHING"
       }], status: "online"
     })
