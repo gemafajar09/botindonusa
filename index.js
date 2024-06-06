@@ -1,34 +1,4 @@
-﻿/*
-WRITTEN BY Douile & Roque
-https://github.com/Douile/
-https://github.com/RoqueDEV/
-
-UPDATED BY Skylar
-https://github.com/TheONLYGod1
-https://top.gg/bot/515645834684006400
-https://godsnetwork.live
-
------------
-
-Environment setup
-Set environment variables as described below:
-  URL_SERVER - base url for fiveM server e.g. http://127.0.0.1:3501
-  BOT_TOKEN - Discord bot token
-  CHANNEL_ID - channel id for updates to be pushed to
-  MESSAGE_ID - message id of previous update to edit (not required)
-  SUGGESTION_CHANNEL - channel to create suggestion embeds in
-  BUG_CHANNEL - channel to recieve bug reports
-  BUG_LOG_CHANNEL - channel to log bug reports
-  LOG_CHANNEL - channel to log status changes
-  EMBED_COLOR - color of the status embed
-  PERMISSION - permission node that users need to run commands
-  BOT_TOKEN - discord application token AKA bot token
-  DEBUG - shows debug logs (spammy)
-  WEBSITE_URL - creates a link button for the status embed
-  RESTART_TIMES - displays what times the server restarts
-*/
-
-const setup = require('./setup.js');
+﻿const setup = require('./setup.js');
 const {
   start
 } = require('./bot.js');

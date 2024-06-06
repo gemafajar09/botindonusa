@@ -149,15 +149,15 @@ exports.start = function(SETUP) {
       }
     }
   };
-bot.on('ready', () => {
-var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBERS','MANAGE_GUILD','ADD_REACTIONS','VIEW_AUDIT_LOG','PRIORITY_SPEAKER' ,'VIEW_CHANNEL','SEND_MESSAGES','SEND_TTS_MESSAGES','MANAGE_MESSAGES','READ_MESSAGE_HISTORY','MENTION_EVERYONE','USE_EXTERNAL_EMOJIS' ,'VIEW_GUILD_INSIGHTS','CONNECT','SPEAK','MUTE_MEMBERS','DEAFEN_MEMBERS','MOVE_MEMBERS','USE_VAD','CHANGE_NICKNAME','MANAGE_NICKNAMES','MANAGE_ROLES','MANAGE_WEBHOOKS','MANAGE_EMOJIS','STREAM','EMBED_LINKS','ATTACH_FILES','MANAGE_CHANNELS']  
-  if(!checkMe.includes(PERMISSION)) {
 
-  console.log(`${chalk.bgRed("[ERROR]")} ${chalk.red(`⚠ NOTICE: Your 'PERMISSION' variable (${chalk.underline.yellow(PERMISSION)}) is incorrect please, check the readme to find the list of permissions... exiting....`)}`);
- process.exit(0);          
-  }
+  bot.on('ready', () => {
+    var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBERS','MANAGE_GUILD','ADD_REACTIONS','VIEW_AUDIT_LOG','PRIORITY_SPEAKER' ,'VIEW_CHANNEL','SEND_MESSAGES','SEND_TTS_MESSAGES','MANAGE_MESSAGES','READ_MESSAGE_HISTORY','MENTION_EVERYONE','USE_EXTERNAL_EMOJIS' ,'VIEW_GUILD_INSIGHTS','CONNECT','SPEAK','MUTE_MEMBERS','DEAFEN_MEMBERS','MOVE_MEMBERS','USE_VAD','CHANGE_NICKNAME','MANAGE_NICKNAMES','MANAGE_ROLES','MANAGE_WEBHOOKS','MANAGE_EMOJIS','STREAM','EMBED_LINKS','ATTACH_FILES','MANAGE_CHANNELS']  
+    if(!checkMe.includes(PERMISSION)) {
+      console.log(`${chalk.bgRed("[ERROR]")} ${chalk.red(`⚠ NOTICE: Your 'PERMISSION' variable (${chalk.underline.yellow(PERMISSION)}) is incorrect please, check the readme to find the list of permissions... exiting....`)}`);
+      process.exit(0);          
+    }
 
-})
+  })
   const UpdateEmbed = function() {
     let embed = new Discord.MessageEmbed()
     .setAuthor({ name: `${SERVER_NAME} | Server Status`, iconURL: SERVER_LOGO })
@@ -432,13 +432,14 @@ var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBE
       }
     }
   });
-try {
-  bot.login(BOT_TOKEN)
-  return bot;
-} catch(error) {
-    console.log(`${chalk.bgRed(`[ERROR]`)} ${chalk.red('The token you provided is invalided. Please make sure you are using the correct one from https://discord.com/developers/applications!')}`);
-    console.log(`${chalk.bGRed(`[ERROR]`)} ${chalk.red(error)}`);
-   process.exit(1);
   
-}
+  try {
+    bot.login(BOT_TOKEN)
+    return bot;
+  } catch(error) {
+      console.log(`${chalk.bgRed(`[ERROR]`)} ${chalk.red('The token you provided is invalided. Please make sure you are using the correct one from https://discord.com/developers/applications!')}`);
+      console.log(`${chalk.bGRed(`[ERROR]`)} ${chalk.red(error)}`);
+    process.exit(1);
+    
+  }
 }
