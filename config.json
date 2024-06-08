@@ -1,5 +1,5 @@
 {
-    "URL_SERVER": "http://203.145.34.196:30120",
+    "URL_SERVER": "http://103.139.193.48:30120",
     "SERVER_NAME": "INDONUSA",
     "SERVER_LOGO": "https://cdn.discordapp.com/attachments/1049708315904585818/1055451213438652506/7.png",
     "EMBED_COLOR": "#fff",
@@ -12,7 +12,7 @@
     "BUG_LOG_CHANNEL": "",
     "LOG_CHANNEL": "",
     "DEBUG": false,
-    "WEBSITE_URL": "https://indonusa.avixy.group/",
+    "WEBSITE_URL": "",
     "CONNECT_URL": "fivem://connect/cfx.re/join/4e73k9",
     "CFX_URL": "https://status.cfx.re/",
     "RESTART_TIMES": "7pm",
