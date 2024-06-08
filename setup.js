@@ -65,6 +65,7 @@ const TEMPLATE = {
   }
   
 };
+
 const SAVE_FILE = './config.json';
 
 function loadValue(key) {
